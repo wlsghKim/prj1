@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.wrap {
+  display: grid;
+  grid-template-areas:
+    'um-l     um      um-r'
+    'hd-l     hd      hd-r'
+    'gnb-l    gnb     gnb-r'
+    'mn-l     mn      mn-r'
+    'ft-l     ft      ft-r';
+  grid-template-columns: 20% 600px 20%;
+  grid-template-rows: 50px 150px 50px auto 70px;
+}
+/*1.최상위메뉴*/
+.wrap .item.um .top-menu .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.wrap .item.um-l,
+.wrap .item.um,
+.wrap .item.um-r {
+  background-color: #333;
+  color: white;
+}
+
+/* 2. 헤더 */
+.wrap .item.hd {
+  background-image: url(https://cdn.pixabay.com/photo/2016/03/27/20/12/desk-1284085_960_720.jpg);
+  width: 600px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+/* 3. 메인메뉴 */
+.wrap .item.gnb {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  top: 50px;
+  padding: 0 10px;
+}
+.wrap .item.gnb .depth1 {
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
+  position: relative;
+  right: 50px;
+}
+/*4. 메인 */
+.wrap .item.mn {
+  display: grid;
+  grid-template-areas: 'mn-1     mn-2';
+  grid-template-columns: 20% 80%;
+  margin: 0.3px;
+}
+
+.wrap .item.mn .mn-1 {
+  background-color: lightskyblue;
+}
+.wrap .item.mn .mn-2 {
+  background-color: lightcyan;
+  text-align: center;
+  align-content: center;
+  letter-spacing: 0.5em;
+}
+section {
+  display: flex;
+  background-color: white;
+  width: 250px;
+  text-align: left;
+  position: relative;
+  left: 115px;
+  margin: 10px;
+  letter-spacing: 0;
+}
+#h3 {
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  margin: 10px;
+}
+
+button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: green;
+  color: white;
+  width: 200px;
+  font-weight: bold;
+  padding: 5px;
+  letter-spacing: 0.5em;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 5. 푸터 */
+.wrap .item.ft {
+  display: flex;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.wrap .item.ft-l,
+.wrap .item.ft-r {
+  height: 50px;
+}

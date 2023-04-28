@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* * {outline: 1px solid red;} */
+    body{
+        margin: 0;
+        background-color: rgb(196, 246, 255);
+        width: 800px;
+        height: 800px;
+    }
+    
+    h1{
+        text-align: center;
+    }
+    main{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        width: 300px;
+        /* justify-content: center; */
+    }
+    footer{
+        display: flex;
+        background-color: gray;
+        color: white;
+        height: 50px;
+        width: 800px;
+        align-items: center;
+        justify-content: center;
+    }
+    #resion{
+        width: 85px;
+        height: 20px;
+        font-size: 15px; 
+        background-color: white;
+    }
+    #gender{
+        display: flex;
+        flex-direction: row;
+    }
+
+    button{
+        height: 45px;
+        background-color: green;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <h1>회 원 가 입</h1>
+    <center>
+    <main>
+        아이디 <input type="id">
+        비밀번호 <input type="pw">
+        비밀번호확인 <input type="pwck">
+        전화번호 <input type="phone">
+        별칭 <input type="nik">
+        <label class="title" for="">지역</label>
+        <select name="resion" id="resion" size="3" multiple>
+            <option value="">== 선택 ==</option>
+            <label class="title" for="">성별</label>
+        <input type="radio" name= "gender"><label for = "">남자</label>
+        <input type="radio" name= "gender"><label for = "">여자</label>
+       취미
+       <input type="checkbox"/>독서
+       <input type="checkbox"/>음악감상
+       <input type="checkbox"/>운동
+       <input type="checkbox"/>게임
+
+        <button><a href="">회 원 가 입</a></button>
+
+    </main>
+</center>    
+<footer>Copyright by Gildong Hong.All Rights Reserved.</footer>
+
+    <hr>
+</div>
+</body>
+</html>

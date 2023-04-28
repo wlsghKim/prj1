@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/023d8f21ed.js" crossorigin="anonymous"></script>
+    <style>
+        * {outline: 1px solid red;}
+        body {margin:0;}
+        
+        .wrap {
+      display: grid;
+      grid-template-areas: 
+        "um-l     um      um-r"
+        "hd-l     hd      hd-r"
+        "gnb-l    gnb     gnb-r"
+        "mn-l     mn      mn-r"
+        "fm-l     fm      fm-r"
+        "ft-l     ft      ft-r"
+      ;
+      grid-template-columns: 240px minmax(300px,800px) 240px; 
+      grid-template-rows: 100px 200px 50px auto 50px 150px;
+    }
+
+    .wrap .item.um,
+    .wrap .item.um-l,
+    .wrap .item.um-r {
+      background-color: lightgoldenrodyellow;
+      color:#eee;
+    }
+
+     /* search */
+     .wrap .item.um .search input[type=search]{
+      width:300px;
+      outline: none;
+      padding: 3px;
+      border-radius: 12.5px ;
+    }
+    .wrap .item.um .search .fa-sharp.fa-solid.fa-magnifying-glass {
+      padding: 0 10px;
+    }
+    /* uppermost menu */
+    .wrap .item.um-r .top-menu .menu{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="item um-l">item1</div>
+    <div class="item um">
+        <div class="search">
+            <input type="search" placeholder="검색어를 입력하세요">
+        </div>
+    </div>
+    <div class="item um-r">
+        <div class="top-menu">
+            <ul class="menu">
+              <li class="item"><a href="">1:1분석</a></li>
+              <li class="item"><a href="">커뮤니티</a></li>
+              <li class="item"><a href="">로그인</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="item hd-l">item4</div>
+    <div class="item hd">item5</div>
+    <div class="item hd-r">item6</div>
+    <div class="item gnb-l">item7</div>
+    <div class="item gnb">item8</div>
+    <div class="item gnb-r">item9</div>
+    <div class="item mn-l">item10</div>
+    <div class="item mn">item11</div>
+    <div class="item mn-r">item12</div>
+    <div class="item fm-l">item13</div>
+    <div class="item fm">item14</div>
+    <div class="item fm-r">item15</div>
+    <div class="item ft-l">item16</div>
+    <div class="item ft">item17</div>
+    <div class="item ft-r">item18</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@charset "utf-8";
+:root {
+    --main-bg-color:#eee;
+    --main-color:#333;
+
+    --btn-bg-color:lightblue;
+    --btn-color:white;
+}

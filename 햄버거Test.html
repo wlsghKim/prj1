@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/023d8f21ed.css" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/023d8f21ed.js" crossorigin="anonymous"></script>
+  <style>
+    /* * {outline:1px solid red;} */
+
+    /* reset css */
+    html,body,ul {
+      margin:0; padding:0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color:inherit;
+    }
+
+    /* 기본 layout */
+    .navbar-logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      background-color: #333;
+      color:#eee;
+
+      padding:3px 5px;
+    }
+    .navbar-logo .logo{
+      display: flex;
+      min-width:170px;
+      align-items: center;
+      height:2rem;
+    }
+
+    .navbar-logo .logo .item:nth-of-type(1) .fa-brands.fa-reddit{
+      font-size: 1.3rem;
+      color:pink;
+    }
+    .navbar-logo .logo .item:nth-of-type(2){
+      margin-left: 5px;
+    }
+
+    .navbar-logo .gnb{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+    .navbar-logo .gnb .item {
+      width:70px;
+      padding:5px 0;
+      border-radius: 5%;
+
+      transition: background-color .5s;
+    }
+    .navbar-logo .gnb .item:hover {
+      background-color: #666;
+    }
+    .navbar-logo .gnb .item a{
+      display: inline-block;
+      width:100%;
+      text-align: center;
+    }
+    .navbar-logo .sns{
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+    }
+    .navbar-logo .sns .item{
+      margin-right:5px;
+    }
+
+    #hamburger {
+      display:none;
+      position:absolute;
+      top:0; right:5px;
+
+      font-size: 1.5rem;
+    }
+
+    /* 반응형 쿼리*/
+    @media screen and (width > 768px ){
+      body {
+        background-color: lightgreen;
+      }
+    }    
+    @media screen and (width <= 768px){
+      body {
+        background-color: lightblue;
+      }
+    }
+    @media screen and (width <= 580px){
+      body {
+        background-color: lightyellow;
+      }
+      .navbar-logo .gnb,
+      .navbar-logo .sns {
+        display: none;
+      }
+      .navbar-logo .gnb {
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }  
+
+      #hamburger {
+        display:block;
+      }  
+
+      /* 햄버커 버튼 클릭시*/
+      .navbar-logo.active,
+      .navbar-logo .gnb.active {
+        display: block;
+      }
+
+      .navbar-logo.active .logo {
+        display: flex;
+        justify-content: center;
+        width:100%;
+      }
+      .navbar-logo .sns.active {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar-logo .gnb.active {
+        display:flex;
+        flex-direction: column;
+      }
+      .navbar-logo .gnb.active .item {
+        width:100%;
+        text-align: center;
+      }
+      .navbar-logo .gnb.active .item a{
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="navbar-logo">
+      <ul class="logo">
+        <li class="item"><i class="fa-brands fa-reddit"></i></li>
+        <li class="item">울산KH정보교육원</li>
+      </ul>
+      <ul class="gnb" >
+        <li class="item"><a href="">menu1</a></li>
+        <li class="item"><a href="">menu2</a></li>
+        <li class="item"><a href="">menu3</a></li>
+        <li class="item"><a href="">menu4</a></li>
+        <li class="item"><a href="">menu5</a></li>
+      </ul>
+      <ul class="sns">
+        <li class="item"><i class="fa-brands fa-facebook"></i></li>
+        <li class="item"><i class="fa-brands fa-square-twitter"></i></li>
+        <li class="item"><i class="fa-brands fa-instagram"></i></li>
+      </ul>
+      <a href="#" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </div>
+    <main>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos corrupti quae quo sapiente laborum, omnis necessitatibus nisi soluta, ratione tempore magni molestiae, atque repudiandae! Voluptas, omnis. Illo explicabo id ea!
+    Placeat optio aperiam voluptas temporibus nam? Ad, necessitatibus fugit. Nulla nobis perferendis numquam aliquid explicabo est harum deleniti ipsa perspiciatis corporis voluptates amet, delectus aperiam ipsum nemo dicta? Earum, quis.
+    Voluptatem perferendis nemo nam ea mollitia fuga aperiam dolore cum aliquid consequatur voluptate, quas delectus corrupti laborum veritatis vero praesentium rerum assumenda vel beatae inventore iusto ratione? Recusandae, fugit accusamus.
+    Unde quasi qui voluptatum, harum ad error animi dolores, voluptas expedita porro rerum, saepe iure! Mollitia placeat autem asperiores atque eligendi quas quasi fugiat. Non ipsam ratione obcaecati fuga accusantium?
+    Quibusdam, quidem expedita. Quaerat possimus accusantium velit deleniti consequatur? Architecto, aliquid exercitationem, minus quis non obcaecati impedit nam fuga ex debitis, voluptates sunt ducimus beatae labore! Eveniet, natus? Quo, fugit!
+    Nostrum iure nesciunt consequatur, sunt, eos quis aliquid ex officiis itaque repellat eum sint aut expedita. Libero fugit debitis sapiente commodi cum voluptates nulla dignissimos assumenda maiores, tempora necessitatibus itaque.
+    Fugiat nam inventore, doloremque soluta veniam itaque dolorem nulla facere optio esse. Illo iste vero quasi. Ullam a, ea, voluptate commodi odio laboriosam temporibus voluptatibus libero neque atque accusantium rerum.
+    Quod, eum. Harum facere quos tempora eaque omnis, molestias itaque repellat ratione nihil tenetur temporibus iste distinctio reprehenderit blanditiis vel ut alias fugit deserunt quis cupiditate inventore maiores possimus eveniet!
+    Quaerat non dolore debitis! Ex nihil cumque consectetur sed voluptas praesentium dolores eum nemo illo. Consequatur itaque recusandae quos accusantium ex nisi fugit, repellat eligendi quisquam sequi unde, impedit laudantium?
+    Sunt animi suscipit corporis nihil officia! Impedit, dolor laborum sunt quam consequuntur esse, ducimus inventore sapiente vel architecto ipsum perspiciatis adipisci sequi omnis eius deserunt dignissimos soluta magni asperiores eos.</main>
+    <footer>푸터</footer>
+  </div>
+  <script>
+    // 버튼 접근
+    const $hamburger = document.getElementById('hamburger');
+    
+    // 버튼 클리 센서 추가
+    $hamburger.addEventListener('click',function(){
+      const $navbarLogo = document.querySelector('.navbar-logo');
+      const $gnb = document.querySelector('.navbar-logo .gnb');
+      const $sns = document.querySelector('.navbar-logo .sns');
+
+      console.log('햄버거버튼 클릭됨!');
+      console.log($navbarLogo,$gnb);
+      
+      /* active 클래스값이 없으면 추가, 있으면 제거 */
+      $navbarLogo.classList.toggle('active'); 
+      $gnb.classList.toggle('active'); 
+      $sns.classList.toggle('active'); 
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sign In</title>
+</head>
+
+<body>
+    <form action="/hello">
+        <p>
+            <label for="first">First name:</label>
+            <br>
+            <input type="text" name="fist" id="first" required>
+            <br>
+            <label for="last">Last name:</label>
+            <br>
+            <input type="text" name="last" id="last" required>
+            <br>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            Gender:
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </p>
+        <p>
+            Favorite:
+            <input type="checkbox" name="favorite" id="html" value="html" required>
+            <label for="html">HTML</label>
+            <input type="checkbox" name="favorite" id="css" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="favorite" id="python" value="python">
+            <label for="python">Python</label>
+        </p>
+        <p>
+            University:
+            <select name="university" id="univ" required>
+                <option value="konkuk">Konkuk</option>
+                <option value="chonnam">Chonnam</option>
+                <option value="seoul">Seoul</option>
+            </select>
+        </p>
+        <p>
+            <label for="">Date:</label>
+            <input type="date" name="date" id="date" required>
+        </p>
+        <p>
+            <textarea name="request" id="request"
+            rows="5" cols="25" placeholder="Text Anything!"></textarea>
+        </p>
+        <p>
+            <button>Registration</button>
+        </p>
+    </form>
+
+</body>
+
+</html>

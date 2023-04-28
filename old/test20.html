@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        outline: 1px solid red;
+        }
+        body form:nth-of-type(1) > ul > li:nth-of-type(1) {
+            background-color: yellow;
+        }
+        body form:nth-of-type(1) ul ul li:nth-of-type(2){
+            background-color: yellowgreen;
+        }
+        body form:nth-of-type(1) ul ul li:first-child{
+            background-color: blue;
+        }
+        body form:nth-of-type(1) ul ul li:last-child{
+            background-color: pink;
+        }
+        header, footer{
+            background-color: aqua;
+        }
+        [type="number"]{
+            background-color: skyblue;
+        }
+        input[type="text"]{
+            background-color: orange;
+        }
+        footer:hover{
+            background-color: orangered;
+        }
+        p{
+            background-color: salmon;
+        }
+        p::first-letter {
+            font-size: 2em;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+        /* p > span {
+            font-size: 2em;
+        } */
+        </style>
+</head>
+<body>
+    <header>머리글</header>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, in odio vitae quas similique cumque iusto ullam deleniti neque repellat officia nam, asperiores laboriosam aperiam ducimus, nihil facilis? Inventore, esse.
+    Ea at quod quos rerum soluta consectetur unde deleniti distinctio, earum animi vero necessitatibus aliquam harum ducimus perferendis labore, nesciunt non quibusdam officiis veritatis ipsa. Non minus rem saepe quas.
+    Voluptatibus rem quo laudantium, molestiae deserunt, ad velit iusto, culpa blanditiis totam nihil qui delectus vitae? Ipsam vitae, mollitia quas atque deleniti voluptatem ullam ad. Esse non sed maiores natus.</p>
+    <form>  
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>
+                <ul>
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                </ul>
+            </li>
+        </ul>
+    </form>
+    <form>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </form>
+    <ul>
+        <li><input type="text"></li>
+        <li><input type="number"></li>
+        <li>item3</li>
+    </ul>
+    <footer>바닥글</footer>
+</body>
+</html>
